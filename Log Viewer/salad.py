@@ -194,7 +194,7 @@ while True:
 					fancytype('[salad] New salad balance: $' + str(jason['currentBalance']), colors=['default_colors.OKGREEN', 'default_colors.BOLD', 'default_colors.UNDERLINE'])
 					if jason['currentBalance'] - pongbal > notifthreshold:
 						fancytype('[salad] Sending desktop notification', colors=['default_colors.OKGREEN', 'default_colors.BOLD', 'default_colors.UNDERLINE'])
-						toaster.show_toast("salad log thing", "balance increased by " + str(jason['currentBalance'] - pongbal) + ' since last notification!', threaded=True, icon_path=None, duration=3)
+						toaster.show_toast("Fancy Salad Logs", "Balance increased by " + str(jason['currentBalance'] - pongbal) + ' since last notification!', threaded=True, icon_path=None, duration=3)
 						pongbal = jason['currentBalance']
 				else:
 					fancytype('[salad] Balance didnt change :c')
