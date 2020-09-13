@@ -22,7 +22,7 @@ SALAD_AUTHENTICATION='Your authentication code here!'
 -  6: Make sure salad.py is in same folder as the .env
 -  7: Open salad.py with cmd
 -  8: Pray that it works
--  if it works: yay!
--  if it doesnt: Contact SharkOfGod#8424 on discord
+-  If it works: yay!
+-  If it doesn't: Contact SharkOfGod#8424 on discord
 
 [Original Salad Log Viewer](https://github.com/VukkyLtd/SaladLogViewer)
