@@ -136,45 +136,6 @@ if enablesalad:
 def timenow():
 	return '[' + str(datetime.utcfromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]) + ']'
 
-def updatever(): # absolutely not copy pasted from my bots code
-	if os.path.isfile('noupdate.txt'):
-		fancytype('[update] noupdate.txt found! Updates cancelled...', colors=['default_colors.FAIL'])
-		return
-	try:
-		import requests
-	except ModuleNotFoundError:
-		fancytype('[update] requests api is required to update!')
-		return
-	try:
-		with open('version.txt') as f:
-			ver = int(f.read())
-		chver = requests.get(url = 'http://api.shruc.ml/saladlog/version', params = {})
-		chver = chver.text.replace('\n', '')
-		chver = chver.replace('"', '')
-		if int(chver) > ver:
-			fancytype('[update] Update available! press any key or create noupdate.txt and restart')
-			os.system('pause')
-			time.sleep(1)
-			with open('temp.py', 'w+') as f:
-				file = __file__.replace('\\', '/')
-				print(file)
-				comd = 'print("Hold on im updating myself...")\nimport time\nimport requests\nr = requests.get(url = "http://api.shruc.ml/saladlog/download", params = {})\nwith open("' + file + '", "w+") as f:\n\tf.write(r.text)\nr = requests.get(url = "http://api.shruc.ml/saladlog/version", params = {})\nwith open("version.txt", "w+") as f:\n\tf.write("'+ chver +'")\ntime.sleep(1)\nimport os\nos.system(\'start cmd /c "del temp.py & start py ' + file + '\')'
-				f.write(comd)
-			print('You can close this window')
-			os.system('start cmd /c py temp.py')
-			os.system('exit')
-			exit()
-		else:
-			fancytype('[update] Live logs are up to date!')
-	except requests.ConnectionError as e:
-		print('website went poo >:C')
-	except Exception as e:
-		print(str(e))
-		print('If this is ur first time running SaladLogViewer ignore this!')
-		with open('version.txt', 'w+') as f:
-			f.write('1')
-
-updatever()
 while True:
 	time.sleep(0.5)
 	matches = False
