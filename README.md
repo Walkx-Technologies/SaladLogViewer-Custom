@@ -25,4 +25,4 @@ SALAD_AUTHENTICATION='Your authentication code here!'
 -  if it works: yay!
 -  if it doesnt: Contact SharkOfGod#8424 on discord
 
-`Original: https://github.com/VukkyLtd/SaladLogViewer`
+`Original Salad Log Viewer: https://github.com/VukkyLtd/SaladLogViewer`
