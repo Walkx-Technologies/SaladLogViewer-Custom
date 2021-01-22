@@ -1,4 +1,4 @@
-### SaladLogViewer-Custom
+### SaladLogViewer+
 
 Custom version of the "SaladLogViewer" made by SharkOfGod.
 
